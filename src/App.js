@@ -3,9 +3,10 @@ import SingUp from './components/Singup';
 import { Container } from 'react-bootstrap';
 import { AuthProvider } from "./components/contexts.js/AuthContext";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Dashboard from "./components/Dashboard";
+import ForgotPassword from "./components/ForgotPassword";
 import Login from "./components/Login";
 import Error from "./components/Error";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -14,9 +15,10 @@ function App() {
             <Router>
               <AuthProvider>
                 <Routes>
-                  <Route path="/" exact element={<Dashboard />} />
+                  <Route path="/" exact element={<PrivateRoute />} />
                   <Route path="/singup" exact element={<SingUp />} />
                   <Route path="/login" exact element={<Login />} />
+                  <Route path="/forgot-password" exact element={<ForgotPassword/>} />
                   <Route path="*" exact element={<Error />} />
                 </Routes> 
               </AuthProvider>
