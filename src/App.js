@@ -1,7 +1,7 @@
 import React from "react";
 import SingUp from './components/Singup';
 import { Container } from 'react-bootstrap';
-import { AuthProvider } from "./components/contexts.js/AuthContext";
+import { AuthProvider } from "./components/contexts/AuthContext";
 import {BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import ForgotPassword from "./components/ForgotPassword";
 import Login from "./components/Login";
